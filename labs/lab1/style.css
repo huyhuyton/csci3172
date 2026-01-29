@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+    header {
+      padding: 1.2rem;
+    }
+  }
+
+  body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f30e;
+  }
+  
+  header{
+    background-color: #8b0000;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+  }
+main{
+    max-width: fit-content;
+    margin: auto;
+}
