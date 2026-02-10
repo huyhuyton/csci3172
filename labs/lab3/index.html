@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title> Lab 3</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1> Item Inventory</h1>
+        <input id="searchInput" placeholder="search">
+        <button onClick="searchItems(searchInput.value)">Search</button>
+        <button onClick="listItems()">List All Items</button>"
+        
+        <input id="name" placeholder="name">
+        <input id="type" placeholder="type">
+        <input id="price" type="number" placeholder="number">
+        <input id="quantity" type="number" placeholder="quantity">
+        <input id="description" placeholder="name">
+        <button onClick="handleAdd()"> add </button>
+
+        <input id="removeName" placeholder=" choose name to remove">
+        <button onClick="removeItem(removeName.value)"> remove </button>
+
+        <button onclick="calculateTotalValue()"> Total Value</button>
+        <p id="totalValue"></p>
+
+        <div id="inventory"></div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
