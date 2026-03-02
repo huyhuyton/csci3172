@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+
+.card {
+  width: 300px;
+  margin: auto;
+}
+
+input, button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px;
+}
+
+.msg {
+  margin-top: 10px;
+}

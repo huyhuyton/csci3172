@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>login</h1>
+
+    <form id="loginForm" novalidate>
+      <label>
+        username
+        <input id="loginUsername" name="loginUsername" type="text" autocomplete="username" required />
+      </label>
+
+      <label>
+        password
+        <input id="loginPassword" name="loginPassword" type="password" autocomplete="current-password" required />
+      </label>
+
+      <button id="loginBtn" type="submit">login</button>
+    </form>
+
+    <p id="message" class="msg" aria-live="polite"></p>
+
+    <p class="linkrow">
+      new here?
+      <a href="index.html">go to register</a>
+    </p>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

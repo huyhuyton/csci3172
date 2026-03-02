@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Register </title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>register</h1>
+
+    <form id="registerForm" novalidate>
+      <label>
+        email
+        <input id="email" name="email" type="email" autocomplete="email" required />
+      </label>
+
+      <label>
+        username
+        <input id="username" name="username" type="text" autocomplete="username" required />
+      </label>
+
+      <label>
+        password
+        <input id="password" name="password" type="password" autocomplete="new-password" required />
+      </label>
+
+      <label>
+        confirm password
+        <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required />
+      </label>
+
+      <button id="registerBtn" type="submit">create account</button>
+    </form>
+
+    <p id="message" class="msg" aria-live="polite"></p>
+
+    <p class="linkrow">
+      already have an account?
+      <a href="login.html">go to login</a>
+    </p>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
