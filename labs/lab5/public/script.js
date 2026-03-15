@@ -13,39 +13,38 @@ function makeArtistCard(artist, showButton) {
   card.className = "card";
 
   const image = document.createElement("img");
-
-  if (artist.image) {
+  if (artist.image && artist.image.startsWith("http")) {
     image.src = artist.image;
   } else {
     image.src = "https://via.placeholder.com/300x300?text=No+Image";
   }
-
-  image.alt = artist.name;
+  image.alt = artist.name || "Artist image";
 
   const title = document.createElement("h3");
-  title.textContent = artist.name;
+  title.textContent = artist.name || "Unknown Artist";
 
   const genres = document.createElement("p");
   if (artist.genres && artist.genres.length > 0) {
-
     genres.textContent = "Genres: " + artist.genres.slice(0, 3).join(", ");
   } else {
     genres.textContent = "Genres: Not available";
   }
 
-
   const followers = document.createElement("p");
-  if (artist.followers !== undefined) {
+  if (artist.followers !== undefined && artist.followers !== null) {
     followers.textContent = "Followers: " + artist.followers.toLocaleString();
   } else {
     followers.textContent = "Followers: Not available";
   }
 
   const link = document.createElement("a");
-  link.href = artist.url || "#";
+  if (artist.url && artist.url.startsWith("http")) {
+    link.href = artist.url;
+  } else {
+    link.href = "#";
+  }
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-
   link.textContent = "Open in Spotify";
 
   card.appendChild(image);
@@ -58,7 +57,6 @@ function makeArtistCard(artist, showButton) {
     const button = document.createElement("button");
     button.type = "button";
     button.textContent = "Find Similar Artists";
-
     button.addEventListener("click", function () {
       loadRelatedArtists(artist.id, artist.name);
     });
@@ -67,6 +65,7 @@ function makeArtistCard(artist, showButton) {
 
   return card;
 }
+
 
 function displayArtists(artists, container, showButton) {
   container.innerHTML = "";
